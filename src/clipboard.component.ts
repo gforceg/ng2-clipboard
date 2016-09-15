@@ -3,7 +3,7 @@ import { ClipboardService } from './clipboard.service';
 
 @Component({
   selector: 'clipboard-component',
-  template: '<span class="fa fa-copy clipboard" (click)="copyText()" [title]="altText"></span>',
+  template: '<span class="copy" (click)="copyText()" [title]="altText">copy to clipboard</span>',
   styles: [`
 .clipboard {
     cursor: pointer;
