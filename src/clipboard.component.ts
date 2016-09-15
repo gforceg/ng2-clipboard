@@ -3,7 +3,7 @@ import { Clipboard } from 'ts-clipboard';
 
 @Component({
   selector: 'clipboard-component',
-  template: '<span class="fa fa-copy clipboard" (click)="copyText()"></span>',
+  template: '<span class="fa fa-copy clipboard" (click)="copyText()" [title]="altText"></span>',
   styles: [`
 .clipboard {
     cursor: pointer;
@@ -20,8 +20,8 @@ import { Clipboard } from 'ts-clipboard';
 export class ClipboardComponent {
   constructor() { }
 
-  @Input() content: string;
-
+  @Input() content: string; // the text to be copied
+  @Input() altText: string = 'copy to clipboard'; // the title / altText to be displayed on mouseover
 
   copyText = () => {
   	if (this.content) {
