@@ -1,7 +1,7 @@
 {
   "name": "ng2-clipboard",
   "version": "1.0.0",
-  "description": "angular2 clipboard directive",
+  "description": "angular2 clipboard directives",
   "main": "dist/ng2-clipboard.js",
   "typings": "dist/ng2-clipboard.d.ts",
   "scripts": {
@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/gforceg/ng2-clipboard#readme",
   "dependencies": {
-    "@angular/core": "^2.0.0-rc.7",
-    "rxjs": "^5.0.0-beta.12",
+    "@angular/core": "2.0.0-rc.6",
+    "es6-shim": "^0.35.1",
+    "rxjs": "^5.0.0-beta.11",
+    "ts-clipboard": "^1.0.2",
     "zone.js": "^0.6.22"
   }
 }
