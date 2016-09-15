@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { Clipboard } from 'ts-clipboard';
+import { ClipboardService } from './clipboard.service';
 
 @Component({
   selector: 'clipboard-component',
@@ -18,7 +18,7 @@ import { Clipboard } from 'ts-clipboard';
 `]
 })
 export class ClipboardComponent {
-  constructor() { }
+  constructor(private clipboard: ClipboardService) { }
 
   @Input() content: string; // the text to be copied
   @Input() altText: string = 'copy to clipboard'; // the title / altText to be displayed on mouseover
@@ -26,7 +26,7 @@ export class ClipboardComponent {
   copyText = () => {
   	if (this.content) {
       console.log('copyText: %s' + this.content);
-  		Clipboard.copy(this.content);
+  		this.clipboard.copy(this.content);
   	}
   }
 }
