@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "angular2 clipboard directives",
   "main": "dist/ng2-clipboard.js",
+  "module": "dist/ng2-clipboard.js",
   "typings": "dist/ng2-clipboard.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
