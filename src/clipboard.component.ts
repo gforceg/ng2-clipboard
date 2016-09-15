@@ -25,7 +25,7 @@ export class ClipboardComponent {
 
   copyText = () => {
   	if (this.content) {
-      console.log('copyText: %s' + this.content);
+      // console.log('copyText: %s' + this.content);
   		this.clipboard.copy(this.content);
   	}
   }
