@@ -13,37 +13,21 @@ npm i --save ng2-clipboard
 
 #### ClipboardComponent
 
-```typescript
-import { Component, OnInit } from '@angular/core';
+all of the below usages are valid:
 
-@Component({
-  moduleId: module.id,
-  selector: 'sd-home',
-  template: `
-<div class="card card-dp">
-  <clipboard-component [content]="someText"></clipboard-component>
-  <pre>{{someText}}</pre>
-</div>
-  `,
-  styleUrls: ['home.component.css'],
-})
-
-export class HomeComponent implements OnInit {
-
-  errorMessage: string;
-  someText: string = `
-this
-is some
-nicely
-formatted text`;
-
-  ngOnInit() { }
-
+```html
+<clipboard-component [content]="someText" [faIcon]="true"></clipboard-component>
+<br/>
+<clipboard-component [content]="someText" [img]="'assets/img/terribleIcon.png'" [altText]="'copy to clipboard'"></clipboard-component>
+<br/>
+<clipboard-component [content]="someText" [text]="'click to copy'" [altText]="'copy to clipboard'"></clipboard-component>
+<br/>
+<clipboard-component [content]="someText" [img]="'assets/img/terribleIcon.png'" [faIcon]="true" [text]="'click to copy'"></clipboard-component>
+<br/>
 }
 ```
 
 output
-
 
 ![alt text](https://github.com/gforceg/ng2-clipboard/raw/master/readme/clipboard-component.png "ClipboardComponent")
 
