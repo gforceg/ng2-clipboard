@@ -13,14 +13,17 @@ export class ClipboardComponent implements OnInit {
   constructor(private clipboard: ClipboardService) { }
 
   @Input() content: string; // the text to be copied
-  @Input() faIcon: string // font awesome icons
-
+  @Input() faIcon: boolean // font awesome icons
   @Input() img: string // an image (icon) to be used
-  @Input() altText: string = 'copy to clipboard'; // the text to display
-  @Input() text: string = 'copy to clipboard'; // the title / altText to be displayed on mouseover
+  @Input() altText: string; // the text to display
+  @Input() text: string; // the title / altText to be displayed on mouseover
 
+  // load default config
   ngOnInit() {
-
+      if (!this.content && !this.faIcon && !this.img && !this.text ) {
+        this.text = 'copy';
+      }
+        if (!this.altText) { this.altText = 'copy to clipboard' }
     }
 
   copyText = () => {
