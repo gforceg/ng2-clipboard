@@ -1,32 +1,27 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ClipboardService } from './clipboard.service';
+import { ClipboardService } from '../clipboard.service';
 
-const DEFAULT_STYLE = [`
-.clipboard {
-    cursor: pointer;
-		border-radius: 3px;
-		float: right;
-		padding: 2px;
-		margin: 2px;
-    background-color: #efefef;
-    color: #000;
-    box-shadow: 1px 1px 10px black;
-}
-`];
 
 @Component({
+  moduleId: module.id,
   selector: 'clipboard-component',
-  template: '<span class="clipboard" (click)="copyText()" [title]="altText">copy to clipboard</span>',
-  styles: DEFAULT_STYLE
+  templateUrl: 'clipboard.component.html',
+  styleUrls: ['clipboard.component.css']
 })
-export class ClipboardComponent {
+export class ClipboardComponent implements OnInit {
+
   constructor(private clipboard: ClipboardService) { }
 
   @Input() content: string; // the text to be copied
   @Input() faIcon: string // font awesome icons
+
+  @Input() img: string // an image (icon) to be used
   @Input() altText: string = 'copy to clipboard'; // the text to display
   @Input() text: string = 'copy to clipboard'; // the title / altText to be displayed on mouseover
-  @Input() css: string;
+
+  ngOnInit() {
+
+    }
 
   copyText = () => {
     if (this.content) {
@@ -34,6 +29,4 @@ export class ClipboardComponent {
       this.clipboard.copy(this.content);
     }
   }
-
-  
 }

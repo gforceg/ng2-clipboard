@@ -45,7 +45,7 @@ formatted text`;
 output
 
 
-![alt text](./readme/clipboard-component.png "ClipboardComponent")
+![alt text](https://github.com/gforceg/ng2-clipboard/raw/master/readme/clipboard-component.png "ClipboardComponent")
 
 
 #### ClipboardService
@@ -86,7 +86,7 @@ formatted text`;
 output
 
 
-![alt text](./readme/clipboard-service.png "ClipboardService")
+![alt text](https://github.com/gforceg/ng2-clipboard/raw/master/readme/clipboard-service.png. "ClipboardService")
 
 
 ### imports:

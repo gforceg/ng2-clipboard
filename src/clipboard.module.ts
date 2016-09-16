@@ -1,11 +1,13 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { ClipboardService }   from './clipboard.service';
-import { ClipboardComponent } from './clipboard.component';
+import { CommonModule } from '@angular/common';
 
+import { ClipboardService }   from './clipboard.service';
+import { ClipboardComponent } from './component/clipboard.component';
+import { FontAwesomeModule } from 'ng2-font-awesome';
 
 @NgModule({
-  imports: [],
-  exports: [ClipboardComponent,],
+  imports: [CommonModule, FontAwesomeModule],
+  exports: [ClipboardComponent],
   declarations: [ClipboardComponent],
   providers: [ClipboardService],
 })
