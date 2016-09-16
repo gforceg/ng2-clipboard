@@ -1,10 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ClipboardService } from './clipboard.service';
 
-@Component({
-  selector: 'clipboard-component',
-  template: '<span class="copy" (click)="copyText()" [title]="altText">copy to clipboard</span>',
-  styles: [`
+const DEFAULT_STYLE = [`
 .clipboard {
     cursor: pointer;
 		border-radius: 3px;
@@ -15,18 +12,28 @@ import { ClipboardService } from './clipboard.service';
     color: #000;
     box-shadow: 1px 1px 10px black;
 }
-`]
+`];
+
+@Component({
+  selector: 'clipboard-component',
+  template: '<span class="clipboard" (click)="copyText()" [title]="altText">copy to clipboard</span>',
+  styles: DEFAULT_STYLE
 })
 export class ClipboardComponent {
   constructor(private clipboard: ClipboardService) { }
 
   @Input() content: string; // the text to be copied
-  @Input() altText: string = 'copy to clipboard'; // the title / altText to be displayed on mouseover
+  @Input() faIcon: string // font awesome icons
+  @Input() altText: string = 'copy to clipboard'; // the text to display
+  @Input() text: string = 'copy to clipboard'; // the title / altText to be displayed on mouseover
+  @Input() css: string;
 
   copyText = () => {
-  	if (this.content) {
+    if (this.content) {
       // console.log('copyText: %s' + this.content);
-  		this.clipboard.copy(this.content);
-  	}
+      this.clipboard.copy(this.content);
+    }
   }
+
+  
 }
