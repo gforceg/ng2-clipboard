@@ -7,7 +7,7 @@ import { FontAwesomeModule } from 'ng2-font-awesome';
 
 @NgModule({
   imports: [CommonModule, FontAwesomeModule],
-  exports: [ClipboardComponent],
+  exports: [ClipboardComponent, FontAwesomeModule],
   declarations: [ClipboardComponent],
   providers: [ClipboardService],
 })
