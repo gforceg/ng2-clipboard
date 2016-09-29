@@ -1,6 +1,6 @@
 {
   "name": "ng2-clipboard",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "angular2 clipboard directives",
   "main": "dist/ng2-clipboard.js",
   "module": "dist/ng2-clipboard.js",
