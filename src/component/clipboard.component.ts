@@ -17,6 +17,7 @@ export class ClipboardComponent implements OnInit {
   @Input() img: string // an image (icon) to be used
   @Input() altText: string; // the text to display
   @Input() text: string; // the title / altText to be displayed on mouseover
+  @Input() noClass: boolean = false;
 
   // load default config
   ngOnInit() {
