@@ -1,10 +1,10 @@
 {
   "name": "ng2-clipboard",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "angular2 clipboard directives",
-  "main": "dist/ng2-clipboard.js",
-  "module": "dist/ng2-clipboard.js",
-  "typings": "dist/ng2-clipboard.d.ts",
+  "main": "ng2-clipboard.js",
+  "module": "ng2-clipboard.js",
+  "typings": "ng2-clipboard.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
