@@ -36,7 +36,7 @@ output
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ClipboardService } from 'ng2-clipboard';
+import { ClipboardService } from 'ng2-clipboard/ng2-clipboard';
 
 @Component({
   moduleId: module.id,

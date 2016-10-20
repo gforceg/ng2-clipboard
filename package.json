@@ -1,6 +1,6 @@
 {
   "name": "ng2-clipboard",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "angular2 clipboard directives",
   "main": "ng2-clipboard.js",
   "module": "ng2-clipboard.js",
@@ -28,7 +28,7 @@
     "@angular/common": "^2.0.0",
     "@angular/core": "^2.0.0",
     "es6-shim": "^0.35.1",
-    "ng2-font-awesome": "^1.0.2",
+    "ng2-font-awesome": "^1.0.5",
     "rxjs": "^5.0.0-beta.12",
     "ts-clipboard": "^1.0.12",
     "zone.js": "^0.6.23"
