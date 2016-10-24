@@ -1,4 +1,4 @@
 {
-  "sourceDir": ".",
-  "buildDir": "."
+  "sourceDir": "proj",
+  "buildDir": "proj"
 }
