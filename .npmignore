@@ -4,3 +4,6 @@ gulpfile.js
 gulp-tasks
 build
 .vscode/
+*.html
+*.css
+*.scss
