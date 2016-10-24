@@ -1,0 +1,4 @@
+.vscode/
+*.js
+!gulp-tasks/*.js
+gulpfile.js
