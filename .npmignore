@@ -10,3 +10,4 @@ tslint.json
 tsconfig.json
 *.html
 *.css
+*.scss
