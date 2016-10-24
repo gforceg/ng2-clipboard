@@ -1,5 +1,5 @@
 *.ts
-!d.*.ts
+!*.d.ts
 gulpfile.js
 gulp-tasks
 build
