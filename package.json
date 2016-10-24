@@ -1,0 +1,22 @@
+{
+  "name": "base_project",
+  "version": "1.0.0",
+  "description": "a base angular 2 typescript project that supports sass and builds components with inline-templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Greg Hedin",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-inline-ng2-template": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-typescript": "^3.0.2",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.0.3"
+  }
+}
