@@ -1,0 +1,12 @@
+.vscode/
+TODO.md
+*.ts
+!*.d.ts
+*.scss
+gulpfile.js
+node_modules/
+gulp-tasks/
+tslint.json
+tsconfig.json
+*.html
+*.css
