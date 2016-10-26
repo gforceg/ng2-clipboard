@@ -3,12 +3,11 @@ TODO.md
 *.ts
 !*.d.ts
 *.scss
+*.html
+*.css
 gulpfile.js
 node_modules/
 gulp-tasks/
 tslint.json
 tsconfig.json
-*.html
-*.css
-*.scss
 src/
