@@ -13,7 +13,9 @@
 		"sourceMap": true,
 		"target": "es5"
 	},
-	"files": [	],
+	"files": [
+		"ng2-clipboard.ts"
+	],
 	"angularCompilerOptions": {
 		"genDir": "aot"
 	}

@@ -1,0 +1,4 @@
+<span [ngClass]="{'clipboard': !noClass}" (click)="copyText()" [title]="altText">
+  <font-awesome *ngIf="faIcon" [faIcon]="'copy'"></font-awesome>
+  <img *ngIf="img" [src]="img"/>
+{{text}}</span>
