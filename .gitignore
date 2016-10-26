@@ -6,3 +6,5 @@
 !gulp-tasks/*.js
 !gulpfile.js
 node_modules/
+tmp/
+npm-debug.log

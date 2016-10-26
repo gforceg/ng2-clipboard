@@ -11,3 +11,4 @@ gulp-tasks/
 tslint.json
 tsconfig.json
 src/
+npm-debug.log
