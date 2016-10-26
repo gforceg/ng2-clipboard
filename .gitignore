@@ -1,9 +1,10 @@
-node_modules
-dist
-.vscode/*
-ng2-clipboard/**/*.js
+.vscode/
 *.js
-!gulpfile.js
-!gulp-tasks/*.js
 *.d.ts
 *.js.map
+*.metadata.json
+!gulp-tasks/*.js
+!gulpfile.js
+node_modules/
+!gulpfile.js
+!gulp-tasks/*.js

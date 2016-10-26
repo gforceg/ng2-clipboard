@@ -1,9 +1,13 @@
+.vscode/
+TODO.md
 *.ts
 !*.d.ts
 gulpfile.js
-gulp-tasks
-build
-.vscode/
+node_modules/
+gulp-tasks/
+tslint.json
+tsconfig.json
 *.html
 *.css
 *.scss
+src/

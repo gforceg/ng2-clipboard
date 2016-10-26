@@ -1,21 +1,20 @@
 var gulp = require('gulp');
 let gutil = require('gulp-util');
 
-var sass = require('gulp-sass');
-
 let join = require('path').join;
-let config = require('../config.json');
-const IN_DIR = config.sourceDir;
-const OUT_DIR = config.buildDir;
+
+let config = require('../tasks-config.js');
+
+var sass = require('gulp-sass');
 
 gulp.task('sass', function () {
 
-    gulp.src(join(IN_DIR, '/**/*.scss'))
+    return gulp.src(join(config.TMP_DIR, '/**/*.scss'))
         .pipe(
           sass({
-          sourceComments: true,
-          outputStyle: 'expanded',
+          sourceComments: false,
+          outputStyle: 'compact',
           errorLogToConsole: true})
         )
-        .pipe(gulp.dest(OUT_DIR));
+        .pipe(gulp.dest(config.TMP_DIR));
 });
