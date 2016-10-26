@@ -15,7 +15,7 @@ gulp.task('make barrel', () => {
   fs.writeFileSync('tsconfig-aot.json', JSON.stringify(aotConfig, null, '\t'));
 
   // update the .gitignore to ignore the OUT_DIR
-  let gitignoreBuffer = fs.readFileSync('.gitignore').split('\n');
+  let gitignoreBuffer = String(fs.readFileSync('.gitignore')).split('\n');
   
   let already_ignored = false;
   gitignoreBuffer.forEach((line) => {
