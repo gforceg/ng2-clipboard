@@ -13,5 +13,18 @@ gulp.task('make barrel', () => {
   //  dynamically set the files array in tsconfig-aot.json to point at the new barrel
   aotConfig.files = [barrelFilename];
   fs.writeFileSync('tsconfig-aot.json', JSON.stringify(aotConfig, null, '\t'));
+
+  // update the .gitignore to ignore the OUT_DIR
+  let gitignoreBuffer = fs.readFileSync('.gitignore').split('\n');
+  
+  let already_ignored = false;
+  gitignoreBuffer.forEach((line) => {
+    if (line === `${config.OUT_DIR}/`) { already_ignored = true; }
+  });
+  if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/`); }
+  
+  gitignoreBuffer = gitignoreBuffer.join('\n');
+  fs.writeFileSync('.gitignore', gitignoreBuffer);
+
   return fs.writeFileSync(join('.', barrelFilename), buffer);
 });

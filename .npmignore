@@ -2,6 +2,7 @@
 TODO.md
 *.ts
 !*.d.ts
+!aot/**/*
 *.scss
 *.html
 *.css
