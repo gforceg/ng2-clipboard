@@ -5,6 +5,7 @@
 *.metadata.json
 !gulp-tasks/*.js
 !gulpfile.js
+!tasks-config.js
 node_modules/
 tmp/
 npm-debug.log

@@ -9,6 +9,7 @@ TODO.md
 gulpfile.js
 node_modules/
 gulp-tasks/
+tasks-config.js
 tslint.json
 tsconfig.json
 src/
