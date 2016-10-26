@@ -2,7 +2,7 @@
 TODO.md
 *.ts
 !*.d.ts
-!aot/*
+!aot/**/*
 gulpfile.js
 node_modules/
 gulp-tasks/
