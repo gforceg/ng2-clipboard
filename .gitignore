@@ -9,3 +9,5 @@ node_modules/
 !gulpfile.js
 !gulp-tasks/*.js
 ng2-clipboard/
+tmp/
+npm-debug.log
