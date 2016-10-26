@@ -2,6 +2,7 @@
 TODO.md
 *.ts
 !*.d.ts
+!aot/*
 gulpfile.js
 node_modules/
 gulp-tasks/
@@ -11,3 +12,5 @@ tsconfig.json
 *.css
 *.scss
 src/
+tmp/
+npm-debug.log
