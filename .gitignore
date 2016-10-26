@@ -6,5 +6,3 @@
 !gulp-tasks/*.js
 !gulpfile.js
 node_modules/
-!gulpfile.js
-!gulp-tasks/*.js
