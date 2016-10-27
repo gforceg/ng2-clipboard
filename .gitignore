@@ -10,3 +10,5 @@ node_modules/
 tmp/
 npm-debug.log
 aot/**/*
+
+ng2-base/

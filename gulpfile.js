@@ -12,6 +12,7 @@ gulp.task('default', (done) => {
     'inline',
     'compile',
     'aot',
+    'remove temp',
     done
   );
 })
