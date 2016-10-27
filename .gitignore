@@ -11,4 +11,6 @@ tmp/
 npm-debug.log
 aot/**/*
 
+TODO.md
+
 ng2-base/
