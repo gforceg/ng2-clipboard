@@ -10,6 +10,9 @@ gulp.task('set build vars', () => {
   let buffer = `export * from './${config.OUT_DIR}/index';
 `;
 
+  // fixme: separate this into 'set ignores' and append to .npmignore and .gitignore
+
+
   //  dynamically set the files array in tsconfig-aot.json to point at the new barrel
   aotConfig.files = [barrelFilename];
   aotConfig.angularCompilerOptions.genDir = config.FACTORY_DIR;
@@ -20,10 +23,11 @@ gulp.task('set build vars', () => {
   
   let already_ignored = false;
   gitignoreBuffer.forEach((line) => {
-    if (line === `${config.OUT_DIR}`) { already_ignored = true; }
+    if (line === `${config.OUT_DIR}/`) { already_ignored = true; }
   });
-  if (!already_ignored) { gitignoreBuffer.push(config.OUT_DIR); }
-  
+
+  if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/`); }
+
   gitignoreBuffer = gitignoreBuffer.join('\n');
   return fs.writeFileSync('.gitignore', gitignoreBuffer);
 });

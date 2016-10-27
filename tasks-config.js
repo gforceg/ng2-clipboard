@@ -5,7 +5,9 @@ let configs = {
   'tsc': require('./tsconfig.json'),
   'TMP_DIR': 'tmp',
   'IN_DIR': 'src',
-  'OUT_DIR': pckg.name
+  'OUT_DIR': `${pckg.name}`,
+  'BUNDLE_DIR': 'bundles',
+  'FACTORY_DIR': 'aot'
 }
 
 module.exports = configs;

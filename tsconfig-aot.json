@@ -4,7 +4,7 @@
 		"stripInternal": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"module": "es2015",
+		"module": "commmonjs",
 		"moduleResolution": "node",
 		"noEmitOnError": false,
 		"noImplicitAny": true,
@@ -13,8 +13,10 @@
 		"sourceMap": true,
 		"target": "es5"
 	},
+	"exclude": [
+		"node_modules"
+	],
 	"files": [	],
 	"angularCompilerOptions": {
-		"genDir": "aot"
 	}
 }
