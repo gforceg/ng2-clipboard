@@ -5,23 +5,16 @@ let join = require('path').join;
 let fs = require('fs');
 let rimraf = require('rimraf');
 
+let clean = require('gulp-clean');
+
 let config = require('../tasks-config.js');
 
 gulp.task('clean', () => {
 
-  return [config.OUT_DIR, 'factories/', config.TMP_DIR].forEach(
-  (dir) => {
-    try {
-      fs.accessSync(dir);
-    } catch (ex) {;
-        gutil.log(gutil.colors.yellow(`${ex.message} (skipping)`));
-      return;
-    }
-    try {
-      rimraf.sync(dir);
-    } catch (ex) {
-        gutil.log(gutil.colors.red(`${ex.message} (skipping)`));
-        throw ex;
-    }
-  });
+  return gulp.src([
+    config.OUT_DIR, config.BUNDLE_DIR, config.FACTORY_DIR, config.TMP_DIR,
+    `./${config.package.name}.{js,js.map,d.ts,metadata.json}`, 'src/**/*.{js,js.map,d.ts,metadata.json}',
+    './TODO.md'
+  ])
+  .pipe(clean());
 });
