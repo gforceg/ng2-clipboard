@@ -9,9 +9,9 @@
   "author": "Greg Hedin",
   "license": "MIT",
   "devDependencies": {
-    "@angular/compiler": "^2.1.1",
-    "@angular/compiler-cli": "^2.1.0",
-    "@angular/core": "^2.1.1",
+    "@angular/compiler": "2.1.0",
+    "@angular/compiler-cli": "2.1.0",
+    "@angular/core": "2.1.0",
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.46",
     "codelyzer": "^1.0.0-beta.0",

@@ -4,7 +4,7 @@
 		"stripInternal": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"module": "commmonjs",
+		"module": "commonjs",
 		"moduleResolution": "node",
 		"noEmitOnError": false,
 		"noImplicitAny": true,
@@ -16,7 +16,10 @@
 	"exclude": [
 		"node_modules"
 	],
-	"files": [	],
+	"files": [
+		"ng2-base.ts"
+	],
 	"angularCompilerOptions": {
+		"genDir": "aot"
 	}
 }
