@@ -7,7 +7,7 @@ let rimraf = require('rimraf');
 
 let clean = require('gulp-clean');
 
-let config = require('../tasks-config.js');
+let config = require('../.config/tasks-config.js');
 
 gulp.task('clean', () => {
 

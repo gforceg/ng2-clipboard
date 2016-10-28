@@ -3,7 +3,7 @@ let gutil = require('gulp-util');
 
 let join = require('path').join;
 
-let config = require('../tasks-config.js');
+let config = require('../.config/tasks-config.js');
 
 var sass = require('gulp-sass');
 

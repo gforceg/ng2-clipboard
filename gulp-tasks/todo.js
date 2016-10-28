@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 let gutil = require('gulp-util');
-let config = require('../tasks-config.js');
-
+let config = require('../.config/tasks-config.js');
 
 var todo = require('gulp-todo');
 
