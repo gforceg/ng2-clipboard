@@ -3,6 +3,8 @@ let runSequence = require('run-sequence');
 
 require('require-dir')('./gulp-tasks');
 
+//fixme: auto gitignore configs.BUNDLE_DIR
+
 gulp.task('default', (done) => {
   runSequence(
     'todo',
