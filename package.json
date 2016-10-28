@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "ng2-base",
   "version": "1.0.0",
   "description": "a base angular 2 typescript project that supports sass and builds components with inline-templates",
   "main": "index.js",
