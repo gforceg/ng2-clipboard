@@ -17,9 +17,7 @@
 		"node_modules"
 	],
 	"files": [
-		"hello-world.ts"
 	],
 	"angularCompilerOptions": {
-		"genDir": "aot"
 	}
 }
