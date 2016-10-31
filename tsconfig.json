@@ -8,6 +8,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "files": [
     "ng2-clipboard.ts"
   ],
