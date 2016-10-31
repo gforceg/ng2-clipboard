@@ -11,3 +11,4 @@ node_modules/
 ng2-clipboard/
 tmp/
 npm-debug.log
+.tmp/

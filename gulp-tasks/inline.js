@@ -1,7 +1,7 @@
 let gulp = require('gulp');
 let gutil = require('gulp-util');
 let join = require('path').join;
-let config = require('../tasks-config.js');
+let config = require('../.config/tasks-config.js');
 
 let inline = require('gulp-inline-ng2-template');
 

@@ -37,6 +37,7 @@
     "@types/es6-shim": "^0.31.32",
     "@types/node": "^6.0.45",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-cli": "^1.2.2",
     "gulp-inline-ng2-template": "^3.0.1",
     "gulp-sass": "^2.3.2",

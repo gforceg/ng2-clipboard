@@ -13,4 +13,4 @@ tsconfig.json
 *.scss
 src/
 tmp/
-npm-debug.log
+npm-debug.log.tmp/
