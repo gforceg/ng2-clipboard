@@ -1,4 +1,8 @@
 .vscode/
+.config/
+node_modules/
+gulp-tasks/
+src/
 TODO.md
 *.ts
 !*.d.ts
@@ -6,10 +10,8 @@ TODO.md
 *.html
 *.css
 gulpfile.js
-node_modules/
-gulp-tasks/
+bundlefile.js
 tasks-config.js
 tslint.json
 tsconfig.json
-src/
 npm-debug.log
