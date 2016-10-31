@@ -5,6 +5,7 @@
 *.metadata.json
 !gulp-tasks/*.js
 !gulpfile.js
+!bundlefile.js
 node_modules/
 !gulpfile.js
 !gulp-tasks/*.js
