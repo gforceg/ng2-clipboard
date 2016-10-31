@@ -17,6 +17,6 @@
 		"ng2-clipboard.ts"
 	],
 	"angularCompilerOptions": {
-		"genDir": "aot"
+		"genDir": "ngfactory"
 	}
 }
