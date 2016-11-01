@@ -27,7 +27,7 @@
   "dependencies": {
     "@angular/common": "^2.1.2",
     "@angular/core": "^2.1.2",
-    "ng2-font-awesome": "^1.0.21",
+    "ng2-font-awesome": "^1.0.22",
     "rxjs": "^5.0.0-rc.1",
     "ts-clipboard": "^1.0.13",
     "zone.js": "^0.6.26"
