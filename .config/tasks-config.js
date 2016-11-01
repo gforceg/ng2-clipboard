@@ -7,7 +7,7 @@ let configs = {
   'IN_DIR': 'src',
   'OUT_DIR': `${pckg.name}`,
   'BUNDLE_DIR': 'bundles',
-  'FACTORY_DIR': 'aot'
+  'FACTORY_DIR': 'ngfactory'
 }
 
 module.exports = configs;
