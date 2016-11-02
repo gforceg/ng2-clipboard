@@ -3,7 +3,7 @@ import { ClipboardService } from '../clipboard.service';
 
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'clipboard-component',
   templateUrl: 'clipboard.component.html',
   styleUrls: ['clipboard.component.css']
