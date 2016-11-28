@@ -7,7 +7,7 @@ require('require-dir')('./gulp-tasks');
 
 gulp.task('default', (done) => {
   runSequence(
-    'todo',
+    'to-do',
     'set build vars',
     'make barrel',
     'copy',

@@ -5,7 +5,7 @@ let join = require('path').join;
 let fs = require('fs');
 let rimraf = require('rimraf');
 
-let config = require('../.config/tasks-config.js');
+let config = require('../config/tasks-config.js');
 
 gulp.task('remove temp', () => {
   return rimraf.sync(config.TMP_DIR);
