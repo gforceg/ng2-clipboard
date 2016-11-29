@@ -7,20 +7,7 @@ const Builder = require('systemjs-builder');
 const tasksConfig = require('./config/tasks-config');
 
 function getBuildConfig() { 
-  return {
-    baseUrl: '.',
-    transpiler: 'typescript',
-    map: {
-      '@angular': 'node_modules/@angular',
-      'typescript': 'node_modules/typescript/lib/typescript'
-    },
-    paths: {
-      '*': '*.js',
-    },
-    meta: {
-      './node_modules/@angular/*': {build: false}
-    }
-  };
+  return tasksConfig.bundle_config;
 }
 
 function build(minify) {
