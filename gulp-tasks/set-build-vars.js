@@ -23,7 +23,7 @@ gulp.task('set build vars', () => {
   let already_ignored = false;
   let out_dir_expr = new RegExp(`^${config.OUT_DIR}/`);
   gitignoreBuffer.forEach((line) => {
-    if (out_dir_expr.test(line) === `${config.OUT_DIR}/`) { already_ignored = true; }
+    if (out_dir_expr.test(line)) { already_ignored = true; }
   });
 
   if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/\n`); }
