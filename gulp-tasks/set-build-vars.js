@@ -1,6 +1,6 @@
 let gulp = require('gulp');
 let gutil = require('gulp-util');
-let join = require('path').join;
+let path = require('path');
 let fs = require('fs');
 let config = require('../config/tasks-config.js');
 
@@ -21,8 +21,9 @@ gulp.task('set build vars', () => {
   let gitignoreBuffer = String(fs.readFileSync('.gitignore')).split('\n');
   
   let already_ignored = false;
+  let out_dir_expr = new RegExp(`^${config.OUT_DIR}/`);
   gitignoreBuffer.forEach((line) => {
-    if (line === `${config.OUT_DIR}/`) { already_ignored = true; }
+    if (out_dir_expr.test(line) === `${config.OUT_DIR}/`) { already_ignored = true; }
   });
 
   if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/\n`); }
@@ -31,8 +32,8 @@ gulp.task('set build vars', () => {
   fs.writeFileSync('.gitignore', gitignoreBuffer);
 
   // update the "main" and "typings" dictionaries in package.json
-  config.package_config.main = join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
-  config.package_config.typings = join(`${config.package_config.name}.d.ts`);
+  config.package_config.main = path.posix.join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
+  config.package_config.typings = path.posix.join(`${config.package_config.name}.d.ts`);
   fs.writeFileSync('package.json', JSON.stringify(config.package_config, null, '\t'));
   return;
 });
