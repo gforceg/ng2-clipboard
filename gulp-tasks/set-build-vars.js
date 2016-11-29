@@ -26,7 +26,7 @@ gulp.task('set build vars', () => {
     if (out_dir_expr.test(line)) { already_ignored = true; }
   });
 
-  if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/\n`); }
+  if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/`); }
 
   gitignoreBuffer = gitignoreBuffer.join('\n');
   fs.writeFileSync('.gitignore', gitignoreBuffer);
