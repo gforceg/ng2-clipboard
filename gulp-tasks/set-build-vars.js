@@ -28,5 +28,11 @@ gulp.task('set build vars', () => {
   if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/\n`); }
 
   gitignoreBuffer = gitignoreBuffer.join('\n');
-  return fs.writeFileSync('.gitignore', gitignoreBuffer);
+  fs.writeFileSync('.gitignore', gitignoreBuffer);
+
+  // update the "main" and "typings" dictionaries in package.json
+  config.package_config.main = join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
+  config.package_config.typings = join(`${config.package_config.name}.d.ts`);
+  fs.writeFileSync('package.json', JSON.stringify(config.package_config, null, '\t'));
+  return;
 });
