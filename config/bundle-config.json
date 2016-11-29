@@ -2,8 +2,8 @@
   "baseUrl": ".",
   "transpiler": "typescript",
   "map": {
-    "@angular": "node_modules/@angular",
-    "typescript": "node_modules/typescript/lib/typescript"
+    "@angular": "./node_modules/@angular",
+    "typescript": "./node_modules/typescript/lib/typescript"
   },
   "paths": {
     "*": "*.js"
