@@ -4,7 +4,7 @@
 
 const path = require('path');
 const Builder = require('systemjs-builder');
-const tasksConfig = require('./.config/tasks-config');
+const tasksConfig = require('./config/tasks-config');
 
 function getBuildConfig() { 
   return {
@@ -28,9 +28,9 @@ function build(minify) {
   builder.config(getBuildConfig());
   let fileExt;
   minify ? fileExt = '.umd.min.js' : fileExt = '.umd.js';
-  let outPath = path.join(tasksConfig.BUNDLE_DIR, `${tasksconfig.package_config.name}${fileExt}`);
+  let outPath = path.join(tasksConfig.BUNDLE_DIR, `${tasksConfig.package_config.name}${fileExt}`);
   console.log(`bundling: ${outPath}`);
-  builder.buildStatic(tasksconfig.package_config.name, outPath, {format: 'umd', minify: minify})
+  builder.buildStatic(tasksConfig.package_config.name, outPath, {format: 'umd', minify: minify})
   .then(() => {
     console.log(`${outPath} complete`);
   })

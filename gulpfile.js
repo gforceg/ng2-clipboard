@@ -1,5 +1,5 @@
 let gulp = require('gulp');
-let runSequence = require('run-sequence');
+let runSequence = require('run-sequence').use(gulp);
 
 require('require-dir')('./gulp-tasks');
 
@@ -15,6 +15,7 @@ gulp.task('default', (done) => {
     'inline',
     'compile',
     'aot',
+    'bundle',
     'remove temp',
     done
   );
