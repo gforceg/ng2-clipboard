@@ -3,7 +3,6 @@ let gutil = require('gulp-util');
 let join = require('path').join;
 let fs = require('fs');
 let config = require('../config/tasks-config.js');
-let aotConfig = require('../tsconfig-aot.json');
 
 gulp.task('set build vars', () => {
   let barrelFilename = `${config.package_config.name}.ts`;
@@ -14,9 +13,9 @@ gulp.task('set build vars', () => {
 
 
   //  dynamically set the files array in tsconfig-aot.json to point at the new barrel
-  aotConfig.files = [barrelFilename];
-  aotConfig.angularCompilerOptions.genDir = config.FACTORY_DIR;
-  fs.writeFileSync('tsconfig-aot.json', JSON.stringify(aotConfig, null, '\t'));
+  config.aot_config.files = [barrelFilename];
+  config.aot_config.angularCompilerOptions.genDir = config.FACTORY_DIR;
+  fs.writeFileSync('tsconfig-aot.json', JSON.stringify(config.aot_config, null, '\t'));
 
   // update the .gitignore to ignore the OUT_DIR
   let gitignoreBuffer = String(fs.readFileSync('.gitignore')).split('\n');
