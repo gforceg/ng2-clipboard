@@ -16,4 +16,4 @@ ng2-base/
 !ng2-base/index.ts
 src/ng2-base*
 ng2-base.ts
-bundles/ng2-base*
+bundles/
