@@ -14,3 +14,4 @@ ngfactory/
 TODO.md
 ng2-base/
 !ng2-base/index.ts
+src/ng2-base*
