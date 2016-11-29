@@ -11,3 +11,5 @@ bundlefile.js
 gulpfile.js
 .npmignore
 .gitignore
+tsconfig-aot.json
+tsconfig.json

@@ -17,6 +17,7 @@
 		"node_modules"
 	],
 	"files": [
+
 	],
 	"angularCompilerOptions": {
 		"genDir": "ngfactory"
