@@ -1,13 +1,13 @@
 let gulp = require('gulp');
-let runSequence = require('run-sequence');
+let runSequence = require('run-sequence').use(gulp);
 
 require('require-dir')('./gulp-tasks');
 
 //fixme: auto gitignore configs.BUNDLE_DIR
 
-gulp.task('default', (done) => {
+gulp.task('build', (done) => {
   runSequence(
-    'todo',
+    'to-do',
     'set build vars',
     'make barrel',
     'copy',
@@ -15,7 +15,25 @@ gulp.task('default', (done) => {
     'inline',
     'compile',
     'aot',
+    'bundle',
     'remove temp',
     done
   );
-})
+});
+
+gulp.task('default', (done) => {
+  runSequence(
+    'to-do',
+    'set build vars',
+    'make barrel',
+    'copy',
+    'sass',
+    'inline',
+    'compile',
+    done
+  );
+
+  gulp.task('watch', ['default'], (done) => {
+    //watch your blobs here
+  });
+});

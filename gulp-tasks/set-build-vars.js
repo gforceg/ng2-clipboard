@@ -1,12 +1,11 @@
 let gulp = require('gulp');
 let gutil = require('gulp-util');
-let join = require('path').join;
+let path = require('path');
 let fs = require('fs');
-let config = require('../.config/tasks-config.js');
-let aotConfig = require('../tsconfig-aot.json');
+let config = require('../config/tasks-config.js');
 
 gulp.task('set build vars', () => {
-  let barrelFilename = `${config.package.name}.ts`;
+  let barrelFilename = `${config.package_config.name}.ts`;
   let buffer = `export * from './${config.OUT_DIR}/index';
 `;
 
@@ -14,20 +13,27 @@ gulp.task('set build vars', () => {
 
 
   //  dynamically set the files array in tsconfig-aot.json to point at the new barrel
-  aotConfig.files = [barrelFilename];
-  aotConfig.angularCompilerOptions.genDir = config.FACTORY_DIR;
-  fs.writeFileSync('tsconfig-aot.json', JSON.stringify(aotConfig, null, '\t'));
+  config.aot_config.files = [barrelFilename];
+  config.aot_config.angularCompilerOptions.genDir = config.FACTORY_DIR;
+  fs.writeFileSync('tsconfig-aot.json', JSON.stringify(config.aot_config, null, '\t'));
 
   // update the .gitignore to ignore the OUT_DIR
   let gitignoreBuffer = String(fs.readFileSync('.gitignore')).split('\n');
   
   let already_ignored = false;
+  let out_dir_expr = new RegExp(`^${config.OUT_DIR}/`);
   gitignoreBuffer.forEach((line) => {
-    if (line === `${config.OUT_DIR}/`) { already_ignored = true; }
+    if (out_dir_expr.test(line)) { already_ignored = true; }
   });
 
-  if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/\n`); }
+  if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/`); }
 
   gitignoreBuffer = gitignoreBuffer.join('\n');
-  return fs.writeFileSync('.gitignore', gitignoreBuffer);
+  fs.writeFileSync('.gitignore', gitignoreBuffer);
+
+  // update the "main" and "typings" dictionaries in package.json
+  config.package_config.main = path.posix.join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
+  config.package_config.typings = path.posix.join(`${config.package_config.name}.d.ts`);
+  fs.writeFileSync('package.json', JSON.stringify(config.package_config, null, '\t'));
+  return;
 });

@@ -1,0 +1,23 @@
+{
+  "baseUrl": ".",
+  "transpiler": "typescript",
+  "map": {
+    "@angular": "./node_modules/@angular",
+    "typescript": "./node_modules/typescript/lib/typescript.js",
+    "rxjs": "./node_modules/rxjs",
+    "ng2-font-awesome": "./node_modules/ng2-font-awesome",
+    "date-cruncher": "./node_modules/date-cruncher",
+    "ts-clipboard": "./node_modules/ts-clipboard"
+  },
+  "packages": {
+    "rxjs": { "main": "Rx.js", "defaultExtension": "js" },
+    "date-cruncher": { "main": "./bundles/date-cruncher.umd.js", "defaultExtension": "js" },
+    "ng2-font-awesome": { "main": "./bundles/ng2-font-awesome.umd.js", "defaultExtension": "js" }
+  },
+  "paths": {
+    "*": "*.js"
+  },
+  "meta": {
+    "./node_modules/@angular/*": {"build": false}
+  }
+}
