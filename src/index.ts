@@ -1,3 +1,4 @@
-export * from './clipboard.service';
-export * from './component/clipboard.component';
-export * from './clipboard.module';
+export { ClipboardModule } from './clipboard.module';
+export { ClipboardService } from './clipboard.service';
+export { ClipboardComponent } from './component/clipboard.component';
+
