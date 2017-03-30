@@ -1,6 +1,6 @@
 {
 	"name": "ng2-clipboard",
-	"version": "1.0.27",
+	"version": "1.0.28",
 	"description": "angular2 clipboard directives",
 	"main": "bundles/ng2-clipboard.umd.js",
 	"module": "ng2-clipboard.js",
