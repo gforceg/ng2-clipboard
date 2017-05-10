@@ -32,8 +32,11 @@ gulp.task('default', (done) => {
     'compile',
     done
   );
-
-  gulp.task('watch', (done) => {
-
-  });
 });
+
+gulp.task('watch', ['default'], (done) => {
+  let watcher = gulp.watch('./src/**/*.{ts,html,css}', ['default']);
+  watcher.on('change', (e) => {
+    console.log(e.path + ' was ' + e.type + ', running default');
+  });
+})
