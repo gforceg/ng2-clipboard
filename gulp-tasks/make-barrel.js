@@ -6,7 +6,7 @@ let fs = require('fs');
 let config = require('../config/tasks-config.js');
 
 gulp.task('make barrel', () => {
-  let exportPath = posixJoin('./', config.OUT_DIR, 'index');
+  let exportPath = posixJoin('./', config.OUT_DIR, config.barrel_file_name);
   let buffer = `export * from './${exportPath}';`;
 
   try {
