@@ -24,7 +24,7 @@ gulp.task('tsc out folder', () => {
 
 gulp.task('tsc root barrel', () => {
 
-  return gulp.src(join(process.cwd(), 'index.ts')) // `${config.package_config.name}.ts`))
+  return gulp.src(join(process.cwd(), `${config.barrel_file_name}.ts`))
   // .pipe(inline({ useRelativePaths: true }))
   .pipe(ts(config.tsc_config.compilerOptions))
   .pipe(gulp.dest(process.cwd()));

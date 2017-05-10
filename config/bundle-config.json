@@ -12,7 +12,8 @@
   "packages": {
     "rxjs": { "main": "Rx.js", "defaultExtension": "js" },
     "date-cruncher": { "main": "./bundles/date-cruncher.umd.js", "defaultExtension": "js" },
-    "ng2-font-awesome": { "main": "./bundles/ng2-font-awesome.umd.js", "defaultExtension": "js" }
+    "ng2-font-awesome": { "main": "./bundles/ng2-font-awesome.umd.js", "defaultExtension": "js" },
+    "typescript": "./node_modules/typescript/lib/typescript"
   },
   "paths": {
     "*": "*.js"

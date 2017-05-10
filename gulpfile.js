@@ -32,8 +32,4 @@ gulp.task('default', (done) => {
     'compile',
     done
   );
-
-  gulp.task('watch', ['default'], (done) => {
-    //watch your blobs here
-  });
 });
