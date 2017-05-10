@@ -17,7 +17,7 @@ function build(minify) {
   minify ? fileExt = '.umd.min.js' : fileExt = '.umd.js';
   let outPath = path.join(tasksConfig.BUNDLE_DIR, `${tasksConfig.package_config.name}${fileExt}`);
   console.log(`bundling: ${outPath}`);
-  builder.buildStatic(tasksConfig.package_config.name, outPath, {format: 'umd', minify: minify})
+  builder.buildStatic('index', outPath, {format: 'umd', minify: minify})
   .then(() => {
     console.log(`${outPath} complete`);
   })
