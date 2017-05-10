@@ -1,61 +1,61 @@
 {
-	"name": "ng2-clipboard",
-	"version": "1.0.30",
-	"description": "angular2 clipboard directives",
-	"main": "bundles/ng2-clipboard.umd.js",
-	"module": "index.js",
-	"typings": "index.d.ts",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/gforceg/ng2-clipboard.git"
-	},
-	"keywords": [
-		"ng2",
-		"copy",
-		"paste",
-		"clipboard"
-	],
-	"author": "Greg Hedin",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/gforceg/ng2-clipboard/issues"
-	},
-	"homepage": "https://github.com/gforceg/ng2-clipboard#readme",
-	"dependencies": {
-		"ng2-font-awesome": "^1.0.28",
-		"ts-clipboard": "^1.0.14"
-	},
-	"peerDependencies": {
-		"rxjs": "^5.0.1",
-		"@angular/common": "^4.0.0",
-		"@angular/core": "^4.0.0",
-		"zone.js": "^0.8.4"
-	},
-	"devDependencies": {
-		"@angular/common": "^4.0.0",
-		"@angular/compiler": "^4.0.0",
-		"@angular/compiler-cli": "^4.0.0",
-		"@angular/core": "^4.0.0",
-		"@types/node": "^6.0.45",
-		"del": "^2.2.2",
-		"gulp": "^3.9.1",
-		"gulp-clean": "^0.3.2",
-		"gulp-cli": "^1.2.2",
-		"gulp-inline-ng2-template": "^3.0.1",
-		"gulp-sass": "^2.3.2",
-		"gulp-sourcemaps": "^2.2.0",
-		"gulp-todo": "^5.0.0",
-		"gulp-typescript": "^3.0.2",
-		"gulp-util": "^3.0.7",
-		"require-dir": "^0.3.1",
-		"run-sequence": "^1.2.2",
-		"rxjs": "^5.0.1",
-		"systemjs-builder": "^0.15.33",
-		"tslint": "^3.15.1",
-		"typescript": "^2.2.2",
-		"zone.js": "^0.8.4"
-	}
+  "name": "ng2-clipboard",
+  "version": "1.0.31",
+  "description": "angular2 clipboard directives",
+  "main": "bundles/ng2-clipboard.umd.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gforceg/ng2-clipboard.git"
+  },
+  "keywords": [
+    "ng2",
+    "copy",
+    "paste",
+    "clipboard"
+  ],
+  "author": "Greg Hedin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gforceg/ng2-clipboard/issues"
+  },
+  "homepage": "https://github.com/gforceg/ng2-clipboard#readme",
+  "dependencies": {
+    "ng2-font-awesome": "^1.0.28",
+    "ts-clipboard": "^1.0.14"
+  },
+  "peerDependencies": {
+    "rxjs": "^5.0.1",
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@types/node": "^6.0.45",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-cli": "^1.2.2",
+    "gulp-inline-ng2-template": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-todo": "^5.0.0",
+    "gulp-typescript": "^3.0.2",
+    "gulp-util": "^3.0.7",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "rxjs": "^5.0.1",
+    "systemjs-builder": "^0.15.33",
+    "tslint": "^3.15.1",
+    "typescript": "^2.2.2",
+    "zone.js": "^0.8.4"
+  }
 }
