@@ -33,6 +33,7 @@ gulp.task('set build vars', () => {
   // update the "main" and "typings" dictionaries in package.json
   config.package_config.main = path.posix.join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
   config.package_config.typings = path.posix.join(`${config.barrel_file_name}.d.ts`);
+  config.package_config.module = path.posix.join(`${config.barrel_file_name}.js`)
   fs.writeFileSync('package.json', JSON.stringify(config.package_config, null, '\t'));
   return;
 });

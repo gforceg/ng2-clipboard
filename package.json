@@ -52,5 +52,6 @@
 	"bugs": {
 		"url": "https://github.com/gforceg/ng2-base/issues"
 	},
-	"homepage": "https://github.com/gforceg/ng2-base#readme"
+	"homepage": "https://github.com/gforceg/ng2-base#readme",
+	"module": "index.js"
 }
