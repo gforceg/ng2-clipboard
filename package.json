@@ -25,7 +25,7 @@
 	},
 	"homepage": "https://github.com/gforceg/ng2-clipboard#readme",
 	"dependencies": {
-		"ng2-font-awesome": "^1.0.27",
+		"ng2-font-awesome": "^1.0.28",
 		"ts-clipboard": "^1.0.14"
 	},
 	"peerDependencies": {
@@ -55,7 +55,7 @@
 		"rxjs": "^5.0.1",
 		"systemjs-builder": "^0.15.33",
 		"tslint": "^3.15.1",
-		"typescript": "^2.1.5",
+		"typescript": "^2.2.2",
 		"zone.js": "^0.8.4"
 	}
 }

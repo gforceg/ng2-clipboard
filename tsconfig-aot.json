@@ -18,7 +18,7 @@
 		]
 	},
 	"files": [
-		"ng2-clipboard.ts"
+		"index.ts"
 	],
 	"angularCompilerOptions": {
 		"genDir": "ngfactory"

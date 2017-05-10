@@ -5,7 +5,7 @@ let fs = require('fs');
 let config = require('../config/tasks-config.js');
 
 gulp.task('set build vars', () => {
-  let barrelFilename = `${config.package_config.name}.ts`;
+  let barrelFilename = 'index.ts' // `${config.package_config.name}.ts`;
   let buffer = `export * from './${config.OUT_DIR}/index';
 `;
 
