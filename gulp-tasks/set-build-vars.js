@@ -5,7 +5,6 @@ let fs = require('fs');
 let config = require('../config/tasks-config.js');
 
 gulp.task('set build vars', () => {
-  let barrelFilename = `${config.package_config.name}.ts`;
   let buffer = `export * from './${config.OUT_DIR}/index';
 `;
 
@@ -13,7 +12,7 @@ gulp.task('set build vars', () => {
 
 
   //  dynamically set the files array in tsconfig-aot.json to point at the new barrel
-  config.aot_config.files = [barrelFilename];
+  config.aot_config.files = [config.barrel_file_name + '.ts'];
   config.aot_config.angularCompilerOptions.genDir = config.FACTORY_DIR;
   fs.writeFileSync('tsconfig-aot.json', JSON.stringify(config.aot_config, null, '\t'));
 
@@ -33,7 +32,7 @@ gulp.task('set build vars', () => {
 
   // update the "main" and "typings" dictionaries in package.json
   config.package_config.main = path.posix.join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
-  config.package_config.typings = path.posix.join(`${config.package_config.name}.d.ts`);
+  config.package_config.typings = path.posix.join(`${config.barrel_file_name}.d.ts`);
   fs.writeFileSync('package.json', JSON.stringify(config.package_config, null, '\t'));
   return;
 });

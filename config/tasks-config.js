@@ -3,6 +3,7 @@ let bundle_config = require("./bundle-config.json");
 
 let configs = {
   "package_config": pckg,
+  "barrel_file_name": 'index',
   "tsc_config": require("../tsconfig.json"),
   "aot_config": require("../tsconfig-aot.json"),
   "bundle_config": bundle_config,

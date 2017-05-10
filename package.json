@@ -1,55 +1,56 @@
 {
-  "name": "ng2-base",
-  "version": "1.0.0",
-  "description": "a base angular 2 typescript project that supports sass and builds components with inline-templates",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Greg Hedin",
-  "license": "MIT",
-  "devDependencies": {
-    "@angular/compiler": "2.1.0",
-    "@angular/compiler-cli": "2.1.0",
-    "@angular/core": "2.1.0",
-    "@types/core-js": "^0.9.34",
-    "@types/node": "^6.0.46",
-    "codelyzer": "^1.0.0-beta.0",
-    "del": "^2.2.2",
-    "es6-shim": "^0.35.1",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-cli": "^1.2.2",
-    "gulp-inline-ng2-template": "^3.0.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.2.0",
-    "gulp-todo": "^5.0.0",
-    "gulp-typescript": "^3.0.2",
-    "gulp-util": "^3.0.7",
-    "reflect-metadata": "^0.1.8",
-    "require-dir": "^0.3.1",
-    "rimraf": "^2.5.4",
-    "run-sequence": "^1.2.2",
-    "rxjs": "^5.0.0-rc.1",
-    "shasum": "^1.0.2",
-    "systemjs-builder": "^0.15.33",
-    "tslint": "^3.15.1",
-    "typescript": "^2.0.6",
-    "zone.js": "^0.6.26"
-  },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gforceg/ng2-base.git"
-  },
-  "keywords": [
-    "angular2",
-    "module",
-    "template",
-    "boilerplate"
-  ],
-  "bugs": {
-    "url": "https://github.com/gforceg/ng2-base/issues"
-  },
-  "homepage": "https://github.com/gforceg/ng2-base#readme"
+	"name": "ng2-base",
+	"version": "1.0.0",
+	"description": "a base angular 2 typescript project that supports sass and builds components with inline-templates",
+	"main": "bundles/ng2-base.umd.js",
+	"typings": "index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Greg Hedin",
+	"license": "MIT",
+	"devDependencies": {
+		"@angular/compiler": "2.1.0",
+		"@angular/compiler-cli": "2.1.0",
+		"@angular/core": "2.1.0",
+		"@types/core-js": "^0.9.34",
+		"@types/node": "^6.0.46",
+		"codelyzer": "^1.0.0-beta.0",
+		"del": "^2.2.2",
+		"es6-shim": "^0.35.1",
+		"gulp": "^3.9.1",
+		"gulp-clean": "^0.3.2",
+		"gulp-cli": "^1.2.2",
+		"gulp-inline-ng2-template": "^3.0.1",
+		"gulp-sass": "^2.3.2",
+		"gulp-sourcemaps": "^2.2.0",
+		"gulp-todo": "^5.0.0",
+		"gulp-typescript": "^3.0.2",
+		"gulp-util": "^3.0.7",
+		"reflect-metadata": "^0.1.8",
+		"require-dir": "^0.3.1",
+		"rimraf": "^2.5.4",
+		"run-sequence": "^1.2.2",
+		"rxjs": "^5.0.0-rc.1",
+		"shasum": "^1.0.2",
+		"systemjs-builder": "^0.15.33",
+		"tslint": "^3.15.1",
+		"typescript": "^2.0.6",
+		"zone.js": "^0.6.26"
+	},
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gforceg/ng2-base.git"
+	},
+	"keywords": [
+		"angular2",
+		"module",
+		"template",
+		"boilerplate"
+	],
+	"bugs": {
+		"url": "https://github.com/gforceg/ng2-base/issues"
+	},
+	"homepage": "https://github.com/gforceg/ng2-base#readme"
 }
