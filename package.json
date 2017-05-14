@@ -1,6 +1,6 @@
 {
 	"name": "ng2-base",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "a base angular 2 typescript project that supports sass and builds components with inline-templates",
 	"main": "bundles/ng2-base.umd.js",
 	"typings": "index.d.ts",
