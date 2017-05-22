@@ -848,6 +848,10 @@ flagged-respawn@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
 
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+
 for-in@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2060,9 +2064,11 @@ natives@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/natives/-/natives-1.1.0.tgz#e9ff841418a6b2ec7a495e939984f78f163e6e31"
 
-ng2-font-awesome@1.0.29:
-  version "1.0.29"
-  resolved "https://registry.yarnpkg.com/ng2-font-awesome/-/ng2-font-awesome-1.0.29.tgz#9d9310ca913dbbcfc7a7e7215f04c95d1c8b4e74"
+ng2-font-awesome@1.0.30:
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/ng2-font-awesome/-/ng2-font-awesome-1.0.30.tgz#b91409754871345d261daca9e2cf54959c51c5db"
+  dependencies:
+    font-awesome "^4.7.0"
 
 node-gyp@^3.3.1:
   version "3.6.1"
