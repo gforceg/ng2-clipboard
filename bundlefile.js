@@ -10,14 +10,14 @@ function getBuildConfig() {
   return tasksConfig.bundle_config;
 }
 
-function build(minify) {
+function build(moduleFormat, minify) {
   var builder = new Builder();
   builder.config(getBuildConfig());
   let fileExt;
-  minify ? fileExt = '.umd.min.js' : fileExt = '.umd.js';
+  minify ? fileExt = `.${moduleFormat}.min.js` : fileExt = `.${moduleFormat}.js`;
   let outPath = path.join(tasksConfig.BUNDLE_DIR, `${tasksConfig.package_config.name}${fileExt}`);
   console.log(`bundling: ${outPath}`);
-  builder.buildStatic(tasksConfig.barrel_file_name, outPath, {format: 'umd', minify: minify})
+  builder.buildStatic(tasksConfig.barrel_file_name, outPath, {format: moduleFormat, minify: minify})
   .then(() => {
     console.log(`${outPath} complete`);
   })
@@ -27,5 +27,6 @@ function build(minify) {
   });
 }
 
-build(false); // .umd.js
-build(true);  // .umd.min.js
+build('umd', false); // .umd.js
+build('umd', true);  // .umd.min.js
+build('esm', false); // .esm.js
