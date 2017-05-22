@@ -8,7 +8,7 @@ let ts = require('gulp-typescript');
 let sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sourcemaps', ['tsc out folder'], () => {
-  return gulp.src(join(config.OUT_DIR, '**/*.js'))
+  return gulp.src([join(config.OUT_DIR, '**/*.js'), config.barrel_file_name + '.js'])
   .pipe(sourcemaps.init())
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest(config.OUT_DIR));
