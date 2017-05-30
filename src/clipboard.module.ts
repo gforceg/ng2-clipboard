@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ClipboardService }   from './clipboard.service';
 import { ClipboardComponent } from './component/clipboard.component';
-import { FontAwesomeModule } from 'ng2-font-awesome/index';
+import { FontAwesomeModule } from 'ng2-font-awesome';
 
 @NgModule({
   imports: [CommonModule, FontAwesomeModule],

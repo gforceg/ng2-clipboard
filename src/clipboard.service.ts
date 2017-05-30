@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Clipboard } from 'ts-clipboard/ts-clipboard';
+import { Clipboard } from 'ts-clipboard';
 
 @Injectable()
 export class ClipboardService {

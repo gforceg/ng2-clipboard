@@ -3,20 +3,16 @@
   "transpiler": "typescript",
   "map": {
     "@angular": "./node_modules/@angular",
-    "typescript": "./node_modules/typescript/lib/typescript.js",
-    "rxjs": "./node_modules/rxjs",
-    "ng2-font-awesome": "./node_modules/ng2-font-awesome",
-    "ts-clipboard": "./node_modules/ts-clipboard"
-  },
-  "packages": {
-    "rxjs": { "main": "Rx.js", "defaultExtension": "js" },
-    "ng2-font-awesome": { "main": "./bundles/ng2-font-awesome.umd.js", "defaultExtension": "js" },
-    "typescript": "./node_modules/typescript/lib/typescript"
+    "typescript": "./node_modules/typescript/lib/typescript",
+    "rxjs": "./node_modules/rxjs/Rx",
+    "ng2-font-awesome": "./node_modules/ng2-font-awesome/index",
+    "ts-clipboard": "./node_modules/ts-clipboard/ts-clipboard"
   },
   "paths": {
     "*": "*.js"
   },
   "meta": {
-    "./node_modules/@angular/*": {"build": false}
+    "./node_modules/@angular/*": {"build": false},
+    ".node_modules/rxjs/*": {"build": false}
   }
 }
