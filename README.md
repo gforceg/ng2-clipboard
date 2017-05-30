@@ -11,6 +11,38 @@ npm i --save ng2-clipboard
 
 ### usage:
 
+## importing in [angular-seed (mgechev)](https://github.com/mgechev/angular-seed) project
+
+project.config.ts:
+
+```
+  let additionalPackages: ExtendPackages[] = [{
+    name: 'ng2-clipboard',
+    path: 'node_modules/ng2-clipboard/index.js'
+  },
+  {
+    name: 'ng2-font-awesome',
+    path: 'node_modules/ng2-font-awesome/index.js'
+  },
+  {
+    name: 'ts-clipboard',
+    path: 'node_modules/ts-clipboard/ts-clipboard.js'
+  }];
+
+  this.addPackagesBundles(additionalPackages);
+```
+
+## bundling with [systemjs builder](https://github.com/systemjs/builder)
+
+
+
+## importing the module
+
+```
+import { ClipboardModule } from 'ng2-clipboard';
+...
+
+
 #### ClipboardComponent
 
 all of the below usages are valid:
